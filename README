@@ -1,16 +1,53 @@
-[Monitor-Layout: bash script to change monitor layouts with dmenu]
+[Monitor-Layout: bash script to change monitor layouts with 'dmenu' and 'xrandr']
+      
+       ->Switch between different dual monitor layouts where 'eDP1' is the default built-in 
+         laptop monitor and 'hdmi' is the external monitor plugged in via HDMI.
 
-->Switch between different dual monitor layouts where 'eDP1' is the default built-in laptop monitor and 'hdmi' is the external monitor plugged in via HDMI
+       ->Selection for the monitor layout configuration is done with the help of 'dmenu'.
+       
+       ->Selection of the primary monitor.
+       
+       ->Layouts:
+              (a) hdmi above eDP1   (b) hdmi below eDP1
+                 ___________          _________
+                |           |        |  eDP1   |
+                |   HDMI    |        |_________|
+                |___________|        ___________
+                  _________         |           |
+                 |  eDP1   |        |   HDMI    |
+                 |_________|        |___________|
+                 
+               (c) hdmi left-of eDP1
+                  ___________
+                 |           |_________
+                 |   HDMI    |  eDP1   |
+                 |___________|_________|
+                 
+               (d) hdmi right-of eDP1
+                            ___________
+                  _________|           |
+                 |  eDP1   |   HDMI    |
+                 |_________|___________|
+                 
+               (e) hdmi only       (f) eDP1 only    
+                  ___________
+                 |           |        _________
+                 |   HDMI    |       |  eDP1   |
+                 |___________|       |_________|    
+          
+---------------------------------------------------------------------------------------
+       For running:
+              ->Clone this repository.
+                     $git clone https://github.com/PhaseReverse/monitor-layout.git
+                     $cd monitor-layout
 
-->Selection for the monitor layout configuration is done with the help of 'dmenu'
-------------------------------------------------------------------------
-For running:
+              ->Make the scripts executable.
+                     $chmod +x primaryselect.sh position.sh monitorconf.sh run
 
-       ->Make the scripts executable
-              $chmod +x primaryselect.sh position.sh monitorconf.sh run
+              ->Run the bash script 'run'.
+                     $./run
 
-       ->run the bash script 'run'
-              $./run
-
-Note: keybind the script to a key like <XF86Display>
-------------------------------------------------------------------------
+       Note: Keybind the script to a key like <XF86Display>,
+             then change the value of dir in file 'run' to the 
+             absolute path of the directory it is in.
+----------------------------------------------------------------------------------------
