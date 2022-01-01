@@ -1,0 +1,10 @@
+->Switch between different dual monitor layouts where 'eDP1' is the default built-in laptop monitor and 'hdmi' is the external monitor plugged in via HDMI
+
+->Selection for the monitor layout configuration is done with the help of 'dmenu'
+
+->Make the scripts executable
+       $chmod +x primaryselect.sh position.sh monitorconf.sh run
+
+->run the bash script 'run'
+       $./run
+
