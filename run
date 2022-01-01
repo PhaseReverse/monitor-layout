@@ -1,3 +1,3 @@
 #!/bin/bash
-dir="/home/hell/dmenu-crafts/hdmimonitor"
+dir=$(pwd)
 $dir/position.sh $(bash $dir/primaryselect.sh | dmenu -l 20 -p 'primary monitor:' | awk '{print $1}') $($dir/monitorconf.sh | dmenu -l 20 -p 'hdmi monitor layout:')
