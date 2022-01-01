@@ -3,7 +3,7 @@
        ->Switch between different dual monitor layouts where 'eDP1' is the default built-in 
          laptop monitor and 'hdmi' is the external monitor plugged in via HDMI.
 
-       ->Selection for the monitor layout configuration is done with the help of 'dmenu'.
+       ->Selection for the monitor configuration is done with the help of 'dmenu'.
        
        ->Selection of the primary monitor.
        
